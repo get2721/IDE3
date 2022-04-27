@@ -14,9 +14,9 @@ public class Main {
 	// write your code here
         System.out.println("Time to enter details about your Employees. ");
        // do{
-        System.out.println("Enter 1 to create an regular employee ");
-        System.out.println("Enter 2 to create an  employee with Territories ");
-        System.out.println("Enter 3 to create a Sales Employee ");
+        System.out.println("Enter 1 to create a Regular employee ");
+        System.out.println("Enter 2 to create a Sales Employee ");
+        System.out.println("Enter 3 to create a Manufacturing Employee ");
         int employeeType = inputDevice.nextInt();
         //this EmployeeWithTerritories
         inputDevice.nextLine();
@@ -49,8 +49,9 @@ public class Main {
             employee.setSalary(salary);
             //
             // Print out Employee Information
-            System.out.println("Employee ID: " + employee.getId() + " Name: " + employee.getFirstName() + " " + employee.getLastName()
-                    + " Address: " + employee.getAddress() + " " + employee.getState() + " " + employee.getSalary());
+            System.out.println("Employee Information");
+            System.out.println("Employee ID:" + employee.getId() + " Name:" + employee.getFirstName() + " " + employee.getLastName()
+                    + " Address:" + employee.getAddress() + " " + employee.getState() + " Salary:$" + employee.getSalary());
 
         }// end Employee build
         if (employeeType == 2) {
@@ -92,52 +93,69 @@ public class Main {
                 System.out.println("Enter Employee Territory:");
                 int territory = inputDevice.nextInt();
                 employeeTerritory.setTerritory(territory);
+                 //
+                System.out.println("Enter Employee Commission Percentage:");
+                int commission = inputDevice.nextInt();
+                employeeTerritory.setCommission(commission);
+                //
+                System.out.println("Does Employee have a Company Car: Yes or No ");
+                String car = inputDevice.nextLine();
+                employeeTerritory.setCar(car);
 
                 //
                 // Print out Employee Information
-                System.out.println("Employee ID: " + employeeTerritory.getId() + " Name: "+ employeeTerritory.getFirstName() + " " + employeeTerritory.getLastName()
-                        + " Address: " + employeeTerritory.getAddress() + " " + employeeTerritory.getState() + " " + employeeTerritory.getSalary() + " Territory: "  + employeeTerritory.getTerritory());
+            System.out.println("Employee with Territory Information");
+                System.out.println("Employee ID:" + employeeTerritory.getId() + " Name:"+ employeeTerritory.getFirstName() + " " + employeeTerritory.getLastName()
+                        + " Address:" + employeeTerritory.getAddress() + " " + employeeTerritory.getState() + " Salary:$" + employeeTerritory.getSalary() + " Territory:"
+                        + employeeTerritory.getTerritory() + " Commission:"  + employeeTerritory.getCommission() + " Company Car:" + employeeTerritory.getCar());
         }// end Employee with Territories build
          else {
             //
             System.out.println("Enter Employee ID:");
             int id = inputDevice.nextInt();
-            EmployeeSales employeeSales = new EmployeeSales();
-            employeeSales.setId(id);
+            EmployeeManufacturing employeeManufacturing = new EmployeeManufacturing();
+            employeeManufacturing.setId(id);
             inputDevice.nextLine(); // required so not to skip the next question
             //
             //
             System.out.println("Enter Employee First Name:");
             String firstName = inputDevice.nextLine();
-            employeeSales.setFirstName(firstName);
+            employeeManufacturing.setFirstName(firstName);
             //
             System.out.println("Enter Employee Last Name:");
             String lastName = inputDevice.nextLine();
-            employeeSales.setLastName(lastName);
+            employeeManufacturing.setLastName(lastName);
             //
             System.out.println("Enter Employee Street Address:");
             String address = inputDevice.nextLine();
-            employeeSales.setAddress(address);
+            employeeManufacturing.setAddress(address);
             //
             System.out.println("Enter Employee State:");
             String state = inputDevice.nextLine();
-            employeeSales.setState(state);
+            employeeManufacturing.setState(state);
             //
             System.out.println("Enter Employee Salary:");
             int salary = inputDevice.nextInt();
-            employeeSales.setSalary(salary);
+            employeeManufacturing.setSalary(salary);
+            inputDevice.nextLine(); // required so not to skip the next question
             //
-            System.out.println("Enter Employee Commission Percentage:");
-            int commission = inputDevice.nextInt();
-            employeeSales.setCommission(commission);
+            System.out.println("Enter Employee Shift:");
+            String shift = inputDevice.nextLine();
+            employeeManufacturing.setShift(shift);
             //
-            System.out.println("Does Employee have a Company Car: Yes or No ");
-            boolean car = inputDevice.nextBoolean();
-            employeeSales.setCar(car);
+            System.out.println("Enter Employee Assigned Machine:");
+            String machine = inputDevice.nextLine();
+            employeeManufacturing.setMachine(machine);
+            //
+            System.out.println("Enter Employee Parts Quota:");
+            int quota = inputDevice.nextInt();
+            employeeManufacturing.setQuota(quota);
             //
             // Print out Employee Information
-            System.out.println("Employee ID: " + employeeSales.getId() + " Name: "+ employeeSales.getFirstName() + " " + employeeSales.getLastName()
-                    + " Address: " + employeeSales.getAddress() + " " + employeeSales.getState() + " " + employeeSales.getSalary() + " Commission: "  + employeeSales.getCommission() + " Company Car: " + employeeSales.getCar());
+            System.out.println("Sales Employee Information");
+            System.out.println("Employee ID:" + employeeManufacturing.getId() + " Name:"+ employeeManufacturing.getFirstName() + " " + employeeManufacturing.getLastName()
+                    + " Address:" + employeeManufacturing.getAddress() + " " + employeeManufacturing.getState() + "Salary:$" + employeeManufacturing.getSalary() + " Shift:"  + employeeManufacturing.getShift()
+                    + " Assigned Machine:" + employeeManufacturing.getMachine() + " Parts Quota:" + employeeManufacturing.getQuota());
         }//ends the EmployeeSales build
 
 
