@@ -1,3 +1,6 @@
+// Gage Tickle
+// CSC - 201
+//  Program collect information for different types of employees
 public class EmployeeSales extends Employee
 {
 
@@ -22,4 +25,4 @@ public class EmployeeSales extends Employee
        }
 
 
-}
+}// end Class
