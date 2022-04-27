@@ -9,6 +9,7 @@ public class Employee
    private String firstName;
    private String lastName;
    private String address;
+   private String city;
    private String state;
 
    //Getters and Setters
@@ -36,6 +37,10 @@ public class Employee
    {
       return state;
    }
+   public String getCity()
+   {
+      return city;
+   }
    public void setId(int idNum)
    {
       this.id = idNum;
@@ -48,5 +53,6 @@ public class Employee
    public void setLastName(String lname) { lastName = lname;}
    public void setAddress(String add) { address = add;}
    public void setState(String st) { state = st;}
+   public void setCity(String City1) { city = City1;}
 }// end Class
 

@@ -40,6 +40,10 @@ public class Main {
             String address = inputDevice.nextLine();
             employee.setAddress(address);
             //
+            System.out.println("Enter Employee City:");
+            String city = inputDevice.nextLine();
+            employee.setCity(city);
+            //
             System.out.println("Enter Employee State:");
             String state = inputDevice.nextLine();
             employee.setState(state);
@@ -51,7 +55,7 @@ public class Main {
             // Print out Employee Information
             System.out.println("Employee Information");
             System.out.println("Employee ID:" + employee.getId() + " Name:" + employee.getFirstName() + " " + employee.getLastName()
-                    + " Address:" + employee.getAddress() + " " + employee.getState() + " Salary:$" + employee.getSalary());
+                    + " Address:" + employee.getAddress() + employee.getCity() + " " + employee.getState() + " Salary:$" + employee.getSalary());
 
         }// end Employee build
         if (employeeType == 2) {
@@ -74,6 +78,10 @@ public class Main {
                 System.out.println("Enter Employee Street Address:");
                 String address = inputDevice.nextLine();
                 employeeTerritory.setAddress(address);
+                //
+                System.out.println("Enter Employee City:");
+                String city = inputDevice.nextLine();
+                employeeTerritory.setCity(city);
                 //
                 System.out.println("Enter Employee State:");
                 String state = inputDevice.nextLine();
@@ -106,7 +114,7 @@ public class Main {
                 // Print out Employee Information
             System.out.println("Employee with Territory Information");
                 System.out.println("Employee ID:" + employeeTerritory.getId() + " Name:"+ employeeTerritory.getFirstName() + " " + employeeTerritory.getLastName()
-                        + " Address:" + employeeTerritory.getAddress() + " " + employeeTerritory.getState() + " Salary:$" + employeeTerritory.getSalary() + " Territory:"
+                        + " Address:" + employeeTerritory.getAddress() + " " + employeeTerritory.getCity() + " " + employeeTerritory.getState() + " Salary:$" + employeeTerritory.getSalary() + " Territory:"
                         + employeeTerritory.getTerritory() + " Commission:"  + employeeTerritory.getCommission() + " Company Car:" + employeeTerritory.getCar());
         }// end Employee with Territories build
          else {
@@ -129,6 +137,10 @@ public class Main {
             System.out.println("Enter Employee Street Address:");
             String address = inputDevice.nextLine();
             employeeManufacturing.setAddress(address);
+            //
+            System.out.println("Enter Employee City:");
+            String city = inputDevice.nextLine();
+            employeeManufacturing.setCity(city);
             //
             System.out.println("Enter Employee State:");
             String state = inputDevice.nextLine();
@@ -154,7 +166,7 @@ public class Main {
             // Print out Employee Information
             System.out.println("Sales Employee Information");
             System.out.println("Employee ID:" + employeeManufacturing.getId() + " Name:"+ employeeManufacturing.getFirstName() + " " + employeeManufacturing.getLastName()
-                    + " Address:" + employeeManufacturing.getAddress() + " " + employeeManufacturing.getState() + "Salary:$" + employeeManufacturing.getSalary() + " Shift:"  + employeeManufacturing.getShift()
+                    + " Address:" + employeeManufacturing.getAddress() + " " + employeeManufacturing.getCity() + " " + employeeManufacturing.getState() + "Salary:$" + employeeManufacturing.getSalary() + " Shift:"  + employeeManufacturing.getShift()
                     + " Assigned Machine:" + employeeManufacturing.getMachine() + " Parts Quota:" + employeeManufacturing.getQuota());
         }//ends the EmployeeSales build
 
