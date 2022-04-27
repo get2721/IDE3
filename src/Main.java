@@ -105,6 +105,7 @@ public class Main {
                 System.out.println("Enter Employee Commission Percentage:");
                 int commission = inputDevice.nextInt();
                 employeeTerritory.setCommission(commission);
+                inputDevice.nextLine(); // required so not to skip the next question
                 //
                 System.out.println("Does Employee have a Company Car: Yes or No ");
                 String car = inputDevice.nextLine();
